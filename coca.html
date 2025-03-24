@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Stock Prediction Project</title>
+    <link rel="stylesheet" href="coca.css">
+</head>
+<body>
+  <div class="container">
+      <!-- Image Collage for Dashboard Screenshots -->
+      <div class="image-collage">
+          <img src="coca 1.png" alt="Dashboard Screenshot 1">
+          <img src="coca 2.png" alt="Dashboard Screenshot 2">
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+          <h2 class="project-title">Coca-Cola Stock Price Prediction & Dashboard</h2>
+          
+          <p class="project-description">
+            Conducted a comprehensive analysis of Coca-Cola stock market data to uncover trends in prices, volumes, and volatility. Developed new features, including 7-day and 50-day moving averages, daily return percentages, and standardized volume, to improve data insights and modeling performance.
+            Built and optimized a Random Forest Regressor model, achieving an R² score of 0.9996 on test data and 0.9999 on training data, with a low Mean Absolute Error (MAE).
+            Validated the model with 5-fold cross-validation, obtaining an average R² score of 0.9555.
+            Designed an interactive Power BI dashboard featuring: Stock price trends with slicers for year, month, and day selection.
+            Visualizations including trading volume heatmaps and moving average comparisons.
+            Key performance metrics like total trading volume, daily returns, and volatility. Utilized Python (Pandas, Scikit-learn, Matplotlib, Seaborn) for analysis and modeling, along with Power BI for professional visualization.
+            Delivered actionable insights into Coca-Cola stock performance trends and built an industry-ready tool for data exploration.
+          </p>
+
+          <hr>
+          
+          <div class="feature-list">
+              <h3>The Project is structured into three main components:</h3>
+              <ol>
+                  <li>Data Analysis & Preprocessing</li>
+                  <li>Machine Learning Model for Price Prediction</li>
+                  <li>Interactive Power BI Dashboard for Visualization</li>
+              </ol>
+          </div>
+
+          <hr>
+
+          <div class="steps1">
+              <h4>Data Analysis & Preprocessing:</h4>
+              <ul>
+                <li>Data Source: The dataset was retrieved from the Yahoo Finance API using yfinance, covering Coca-Cola’s stock performance from 2015 to 2024.</li>
+                <br>
+                -Key Data Processing Steps:
+               <ol>
+                <br>
+                <li>Feature Engineering: Created 7-day and 50-day moving averages, daily return percentages, and standardized volume.</li>
+                <li>Handling Missing Data: Applied interpolation and forward-fill techniques for seamless data continuity.</li>
+                <li>Outlier Detection: Used boxplot analysis and Z-score methods to handle extreme stock price movements.</li>
+                <li>Data Standardization: Applied Min-Max Scaling to normalize stock prices for improved model performance.</li>
+               </ol>
+              </ul>
+              </ul>
+          </div>
+
+          <hr>
+
+          <div class="steps2">
+              <h4>Machine Learning Model for Stock Price Prediction</h4>
+              <ul>
+                <li>Model Used: Random Forest Regressor</li>
+                <li>Performance Metrics: R² Score (Test Data): 0.9996</li>
+                <li>Mean Absolute Error (MAE): 0.012</li>
+                <li>Cross-validation (5-fold) Average R² Score: 0.9555</li>
+                <br>
+                -Implementation Steps:
+                <br>
+              <ol>
+                <li>Split data into training (80%) and testing (20%) sets.</li>
+                <li>Optimized hyperparameters using GridSearchCV.</li>
+                <li>Evaluated model accuracy using residual analysis and cross-validation.</li>
+                <li>Impact: Achieved high accuracy in predicting Coca-Cola stock prices, showcasing the power of machine learning in financial forecasting.</li>
+              </ol>
+              </ul>
+          </div>
+
+          <hr>
+
+          <div class="steps3">
+            <h4>Interactive Power BI Dashboard for Visualization</h4>
+            The Power BI dashboard provides an interactive and professional representation of Coca-Cola’s stock trends, enabling users to explore insights visually.
+            <br>
+            <br>
+            Key Dashboard Features:
+          <ul>
+            <li>Trend Analysis: Line charts for Open, Close, High, and Low prices.</li>
+            <li>Moving Averages: Overlay of 7-day & 50-day moving averages on stock price trends.</li>
+            <li>Heatmap: Total trading volume by year and month.</li>
+            <li>Volatility Insights: Candlestick chart to visualize high/low price fluctuations.</li>
+            <li>Slicers: Filters for Year, Month, and Date Range selection.</li>
+            <li>Impact: The dashboard provides real-time insights for traders, analysts, and investors, improving decision-making capabilities.</li>
+          </ul>
+          </div> 
+
+          <hr>
+
+          <h3 class="section-title">Repositories</h3>
+          <p><a href="https://github.com/S1nen/Coca-Cola-Stock-Data-Analysis-And-Price-PredictionProject" target="_blank">GitHub Repository</a></p>
+          <p><a href="https://drive.google.com/drive/folders/19QNgJl6njCvCP1etWiHhRg7kkDi1C9ys" target="_blank">Power BI Files</a></p>
+
+          <button onclick="goBack()">Back to Portfolio</button>
+      </div>
+  </div>
+
+  <script>
+      function goBack() {
+          window.history.back();
+      }
+  </script>
+</body>
+</html>
