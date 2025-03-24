@@ -1,0 +1,114 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Collage Wrapper */
+.image-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image-collage img {
+    width: 30%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-collage img:hover {
+    transform: scale(1.05);
+}
+
+/* Project Title */
+.project-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Project Description */
+.project-description {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Sections */
+.steps1, .steps2, .steps3 {
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #000000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h3, h4 {
+    color: #000000;
+}
+
+/* List Items */
+ul, ol {
+    padding-left: 20px;
+}
+
+/* Repository Links */
+p a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Back Button */
+button {
+    display: block;
+    margin: 20px auto;
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #000408;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-collage img {
+        width: 45%;
+    }
+}
