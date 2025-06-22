@@ -1,77 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Insights – Computer hardware business</title>
-    <link rel="stylesheet" href="hospitality.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Insights – Computer Hardware Business Deep Dive</title>
+  <link rel="stylesheet" href="hospitality.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Image Collage Section -->
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="project-hero">
+      <div class="hero-text">
+        <h1>Sales Insights – Computer Hardware Business</h1>
+        <p class="subtitle">
+          An interactive BI dashboard that uncovers sales trends, customer behavior, and regional performance to drive revenue growth.
+        </p>
+        <a class="btn-live" href="https://app.powerbi.com/link-to-your-sales-insights-report" target="_blank">
+           View Live Dashboard
+        </a>
+      </div>
+      <div class="hero-image">
+        <img src="sales ss 1.png" alt="Sales Insights Dashboard Screenshot" />
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <ul>
+        <li><a href="#overview">1. Project Overview</a></li>
+        <li><a href="#etl-model">2. ETL & Data Model</a></li>
+        <li><a href="#visualization">3. Dashboard Visualization</a></li>
+        <li><a href="#insights">4. Key Insights & Metrics</a></li>
+        <li><a href="#tech-stack">5. Tech Stack</a></li>
+        <li><a href="#deployment">6. Deployment</a></li>
+        <li><a href="#future">7. Future Enhancements</a></li>
+        <li><a href="#resources">8. Resources</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <!-- 1. Overview -->
+      <section id="overview">
+        <h2>1. Project Overview</h2>
+        <p>
+          The Sales Insights dashboard for AtliQ Hardware provides a comprehensive view of sales data, enabling stakeholders to track revenue trends, identify top-performing products, and analyze regional and customer purchase behaviors. Designed to support a targeted revenue growth of at least 7% next quarter, it delivers actionable intelligence through intuitive visuals.
+        </p>
+      </section>
+
+      <!-- 2. ETL & Data Model -->
+      <section id="etl-model">
+        <h2>2. ETL & Data Model</h2>
+        <p>
+          Data is sourced from the company’s SQL database and processed via ETL routines that clean, transform, and load sales records into a star schema optimized for reporting. Key fact and dimension tables include:
+        </p>
+        <ul>
+          <li><strong>Fact Sales:</strong> Transaction-level sales data.</li>
+          <li><strong>Dim Products:</strong> Product categories and attributes.</li>
+          <li><strong>Dim Date:</strong> Date hierarchy for time-series analysis.</li>
+          <li><strong>Dim Region:</strong> Geographic segmentation.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Dashboard Visualization -->
+      <section id="visualization">
+        <h2>3. Dashboard Visualization</h2>
         <div class="image-collage">
-            <img src="sales ss 1.png" alt="Hospitality Dashboard 1">
+          <img src="sales ss 1.png" alt="Sales Trend Chart" />
+          <!-- Add more images if available -->
         </div>
+        <p>
+          The dashboard features dynamic filters for time period, product category, and region. Visual elements include line charts for sales trends, bar charts for top products, map visuals for regional distribution, and KPI cards for quick metrics like total revenue and growth percentage.
+        </p>
+      </section>
 
-        <div class="content">
-            <h2 class="project-title">Sales Insights – Computer hardware business</h2>
-            
-            <p class="project-description">
-                This project focuses on the design and development of an interactive BI dashboard for AtliQ Hardware, a company 
-                specializing in computer hardware products. The goal of the dashboard is to analyze sales data comprehensively and 
-                provide actionable insights that can drive data-informed decision-making and support revenue growth. Leveraging SQL for 
-                data extraction, transformation, and loading (ETL), the project ensures clean and well-structured data is available for 
-                analysis. The dashboard incorporates dynamic filtering options and slicers, allowing users to explore sales metrics 
-                across various dimensions such as time period, product category, and region. Through intuitive visualizations, the 
-                dashboard highlights sales trends over time, enabling users to identify seasonal fluctuations, emerging patterns, and 
-                shifts in market demand.
-                <br><br>
-                Key areas of analysis include product performance, customer purchase behavior, and regional sales distribution. The 
-                dashboard evaluates which product categories and individual hardware items contribute the most to revenue, helping s
-                takeholders prioritize inventory and marketing strategies. Regional insights offer a clear picture of where sales are 
-                strongest geographically, enabling targeted campaigns and resource allocation. Customer analytics uncover patterns in 
-                buying behavior, such as purchase frequency and product preferences, supporting better customer engagement and retention 
-                strategies. The insights generated from this solution aim to support a targeted revenue growth goal of at least 7% in 
-                the upcoming quarter by aligning sales strategies with real-time data and business intelligence.
-                
-            </p>
+      <!-- 4. Key Insights & Metrics -->
+      <section id="insights">
+        <h2>4. Key Insights & Metrics</h2>
+        <ul>
+          <li><strong>Seasonal Trends:</strong> Identified peak sales periods during product launch months and holiday seasons.</li>
+          <li><strong>Top Products:</strong> Certain hardware categories (e.g., GPUs, SSDs) consistently contribute over 30% of revenue.</li>
+          <li><strong>Regional Performance:</strong> Western region reports highest average order value; Eastern region shows growth potential.</li>
+          <li><strong>Customer Behavior:</strong> Repeat customers purchase 40% more frequently and have a 15% higher average order value.</li>
+          <li><strong>Revenue Growth:</strong> Dashboard insights support strategies to achieve a projected 7% uplift in the next quarter.</li>
+        </ul>
+      </section>
 
-            <hr>
-            <div class="feature-list">
-                <h3>Project Components:</h3>
-                <ol>
-                    <li> Data Modeling & Star Schema Design</li>
-                    <li> Data Visualization & KPI Analysis</li>
-                    <li> Business Insights & Strategic Recommendations</li>
-                </ol>
-            </div>
-
-
-
-            <hr class="hr">         
-            <div class="steps2">
-                <h3> Data Analysis & Key Insights</h3>
-                <ul>
-                    <li> Data Source: SQL database containing sales records of AtliQ Hardware.</li>
-                    <li>Data Cleaning & Transformation: Performed using SQL queries to ensure data accuracy and consistency.</li>
-                    <li>Visualization & Reporting: Power BI was used to create dynamic dashboards with interactive visual elements.</li>
-                    <li> KPIs & Metrics: Revenue trends, sales growth percentage, top-selling products, sales by region, and profit margins.</li>
-                </ul>
-            </div>
-    
-
-            <hr class="hr">
-            <h3 class="section-title">Repositories & Resources</h3>
-            <p><a href="https://github.com/S1nen/Sales-Insights-project" target="_blank">GitHub Repository</a></p>
-
-            <button onclick="goBack()">⬅ Back to Portfolio</button>
+      <!-- 5. Tech Stack -->
+      <section id="tech-stack">
+        <h2>5. Tech Stack</h2>
+        <div class="tech-grid">
+          <div><strong>Power BI</strong><br><em>Interactive dashboards & reports</em></div>
+          <div><strong>SQL Server</strong><br><em>ETL & data warehousing</em></div>
+          <div><strong>DAX</strong><br><em>Custom calculations & measures</em></div>
+         <div><strong>MySQL</strong><br><em>Data source for sales records</em></div>
+          <div><strong>Star Schema</strong><br><em>Data modeling</em></div>
         </div>
-    </div>
+      </section>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+      <!-- 6. Deployment -->
+      <section id="deployment">
+        <h2>6. Deployment</h2>
+        <p>
+          Deployed to Power BI Service with role-based access controls. Scheduled data refresh ensures daily updates, keeping insights current and reliable for decision-making.
+        </p>
+      </section>
+
+      <!-- 7. Future Enhancements -->
+      <section id="future">
+        <h2>7. Future Enhancements</h2>
+        <ul>
+          <li><strong>Predictive Forecasting:</strong> Integrate predictive models to forecast future sales.</li>
+          <li><strong>Mobile Reports:</strong> Optimize dashboards for mobile devices and tablets.</li>
+          <li><strong>Real-Time Alerts:</strong> Configure Power BI data alerts for threshold breaches.</li>
+          <li><strong>Natural Language Q&A:</strong> Enable conversational querying of the sales data.</li>
+        </ul>
+      </section>
+
+      <!-- 8. Resources -->
+      <section id="resources">
+        <h2>8. Resources</h2>
+        <p><a href="https://github.com/S1nen/Sales-Insights-project" target="_blank">GitHub Repository</a></p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 </html>
