@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Ordering Chatbot – AI-Powered Assistant</title>
+  <link rel="stylesheet" href="hospitality.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Image Collage Section -->
+    <div class="image-collage">
+      <img src="foodbot_ss.png" alt="Chatbot Dashboard Screenshot" />
+    </div>
+
+    <div class="content">
+      <h2 class="project-title">AI-Powered Food Ordering Chatbot</h2>
+
+      <p class="project-description">
+        This project is an end-to-end AI-powered chatbot built to streamline food ordering using natural language.
+        Developed using <strong>Dialogflow</strong> for conversational intelligence and <strong>FastAPI</strong> as the backend, 
+        the chatbot is capable of handling order placement, tracking, and cancellation seamlessly. 
+        The backend connects to a secure <strong>Aiven-hosted MySQL database</strong> to persist and retrieve order data, 
+        ensuring real-time communication with users.
+
+        <br><br>
+        Users can interact with the chatbot directly through a conversational interface, available both on the deployed web 
+        application and integrated into the project portfolio. Hosted using <strong>Render</strong> and secured with 
+        <strong>SSL certificates</strong>, this chatbot simulates a complete digital ordering experience suitable for any restaurant or café.
+        The system is designed to reduce manual overhead, speed up ordering, and improve customer satisfaction.
+
+        <br><br>
+          <strong>Live Demo:</strong> 
+        <a href="https://foodbot-frontend-ujcj.onrender.com" target="_blank">Try the Chatbot Live</a>
+      </p>
+
+      <hr />
+      <div class="feature-list">
+        <h3>Project Components:</h3>
+        <ol>
+          <li>Dialogflow for NLP & Intent Detection</li>
+          <li>FastAPI backend with modular route handling</li>
+          <li>MySQL database integration (hosted on Aiven)</li>
+          <li>Webhook communication with Dialogflow</li>
+          <li>Deployment on Render + Frontend Integration</li>
+        </ol>
+      </div>
+
+      <hr class="hr" />
+      <div class="steps2">
+        <h3>Features & Tech Stack</h3>
+        <ul>
+          <li>Natural conversation with fallback & context support</li>
+          <li>Real-time order insertion, tracking, and cancellation</li>
+          <li>Secure SSL-based MySQL connection using certificate authentication</li>
+          <li>Frontend with Dialogflow Messenger embedded chatbot</li>
+          <li>Cloudflare Tunnels for local testing before deployment</li>
+        </ul>
+      </div>
+
+      <hr class="hr" />
+      <h3 class="section-title">Repositories & Resources</h3>
+      <p><a href="https://github.com/S1nen/Food-Chatbot" target="_blank">GitHub Repository</a></p>
+      <p><a href="https://foodbot-frontend-ujcj.onrender.com" target="_blank">Live Chatbot Website</a></p>
+
+      <button onclick="goBack()">⬅ Back to Portfolio</button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
