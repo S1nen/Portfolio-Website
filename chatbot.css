@@ -1,0 +1,187 @@
+/* ===== Hospitality.css: Accurate Styling for Foodbot Project Page ===== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===== Project Hero ===== */
+.project-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.project-hero .hero-text {
+  flex: 1 1 400px;
+  padding: 2rem;
+}
+.project-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.project-hero .subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+.btn-live {
+  display: inline-block;
+  background: #0077cc;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-live:hover {
+  background: #005fa3;
+}
+.project-hero .hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+  background: #f9f9f9;
+}
+.project-hero .hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+/* ===== Table of Contents ===== */
+.toc ul {
+  list-style: none;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+.toc li + li {
+  margin-top: 0.5rem;
+}
+.toc a {
+  font-size: 0.95rem;
+  color: #0077cc;
+}
+
+/* ===== Content Sections ===== */
+.content section {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #222;
+}
+.content p,
+.content ul,
+.content ol {
+  font-size: 1rem;
+  color: #444;
+}
+.content ul li,
+.content ol li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+.content ul li::marker,
+.content ol li::marker {
+  color: #0077cc;
+}
+
+/* Section specific
+---------------------------------- */
+/* Architecture diagram */
+.arch-diagram {
+  text-align: center;
+  margin: 1rem 0;
+}
+.arch-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.arch-diagram figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Tech Stack Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.tech-grid div {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.tech-grid strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #222;
+}
+.tech-grid em {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hr Styling */
+hr {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-hero {
+    flex-direction: column;
+  }
+  .project-hero .hero-text,
+  .project-hero .hero-image {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+  .toc ul {
+    text-align: center;
+  }
+}
