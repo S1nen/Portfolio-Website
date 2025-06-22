@@ -1,81 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospitality business insights – AtliQ Hotels</title>
-    <link rel="stylesheet" href="hospitality.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospitality Business Insights – AtliQ Hotels Deep Dive</title>
+  <link rel="stylesheet" href="hospitality.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Image Collage Section -->
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="project-hero">
+      <div class="hero-text">
+        <h1>Hospitality Business Insights – AtliQ Hotels</h1>
+        <p class="subtitle">
+          A comprehensive Power BI solution enabling data-driven decisions for revenue optimization and resource management across the AtliQ hotel portfolio.
+        </p>
+        <a class="btn-live" href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" target="_blank">
+           View Dashboard
+        </a>
+      </div>
+      <div class="hero-image">
+        <img src="Screenshot 2025-03-24 000027.png" alt="Dashboard Overview Screenshot" />
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <ul>
+        <li><a href="#overview">1. Project Overview</a></li>
+        <li><a href="#data-model">2. Data Model & Star Schema</a></li>
+        <li><a href="#visualization">3. Dashboard Visualization</a></li>
+        <li><a href="#insights">4. Key Insights & Recommendations</a></li>
+        <li><a href="#tech-stack">5. Tech Stack</a></li>
+        <li><a href="#deployment">6. Deployment</a></li>
+        <li><a href="#future">7. Future Enhancements</a></li>
+        <li><a href="#resources">8. Resources</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <!-- 1. Overview -->
+      <section id="overview">
+        <h2>1. Project Overview</h2>
+        <p>
+          The AtliQ Hotels Business Insights project transforms raw operational data into actionable intelligence via a Power BI dashboard. Covering multiple properties across India, it tracks Revenue, ADR, RevPAR, Occupancy Rate, DSRN, and Realization Percentage to empower strategic decisions.
+        </p>
+      </section>
+
+      <!-- 2. Data Model & Star Schema -->
+      <section id="data-model">
+        <h2>2. Data Model & Star Schema</h2>
+        <p>
+          Built on a star schema, the data model includes two fact tables (<em>Revenue</em>, <em>Bookings</em>) and three dimensions (<em>Hotels</em>, <em>Dates</em>, <em>Customer Segments</em>). This structure optimizes query performance and supports flexible slicing and dicing of KPIs.
+        </p>
+        <figure class="arch-diagram">
+          <img src="schema-diagram.png" alt="Star Schema Diagram" />
+          <figcaption>Star Schema: Facts and Dimensions</figcaption>
+        </figure>
+      </section>
+
+      <!-- 3. Dashboard Visualization -->
+      <section id="visualization">
+        <h2>3. Dashboard Visualization</h2>
         <div class="image-collage">
-            <img src="Screenshot 2025-03-24 000027.png" alt="Hospitality Dashboard 1">
-            <img src="Tooltip Screenshot.png" alt="Hospitality Dashboard 2">
-            <img src="Tooltip2 Screenshot.png" alt="Hospitality Dashboard 3">
+          <img src="Tooltip Screenshot.png" alt="Tooltip Example" />
+          <img src="Tooltip2 Screenshot.png" alt="Interactive Filters" />
         </div>
+        <p>
+          The dashboard features interactive slicers for date ranges, hotel locations, and customer segments. Dynamic tooltips reveal underlying data, while trend charts and KPI cards highlight key performance metrics at a glance.
+        </p>
+      </section>
 
-        <div class="content">
-            <h2 class="project-title">Hospitality business insights – AtliQ Hotels</h2>
-            
-            <p class="project-description">
-                This project delivers an in-depth analysis of hotel performance data for the Atliq Group, which operates multiple 
-                properties across various cities in India. The dashboard is designed to empower stakeholders with data-driven insights 
-                into key operational metrics, helping them make informed decisions around revenue optimization and resource management. 
-                Built on a robust star schema data model, the solution includes two fact tables (revenue and bookings) and three 
-                dimension tables (hotels, dates, and customer segments), ensuring efficient querying and seamless data exploration. 
-                The dashboard tracks critical KPIs such as Revenue, Average Daily Rate (ADR), Revenue per Available Room (RevPAR), 
-                Occupancy Rate, Daily Sold Room Nights (DSRN), and Realization Percentage. With interactive filters, slicers, and 
-                dynamic tooltips, users can analyze performance trends across time, location, customer types, and more, all within a 
-                visually engaging and intuitive interface.
-                <br><br>
-                The project also dives deep into pricing strategies and behavioral trends to identify revenue opportunities. Weekday vs. 
-                weekend performance and demand-based pricing patterns are analyzed to guide dynamic pricing decisions that can maximize 
-                returns. Additionally, occupancy trends and cancellation patterns are examined to highlight areas of improvement, such as
-                overbooking strategies or targeted promotions during low-demand periods. The insights gained from this dashboard enable 
-                the Atliq Group to fine-tune their business strategies, minimize revenue leakage, and enhance overall hotel performance. 
-                Ultimately, this solution serves as a comprehensive tool for aligning operational efforts with financial goals across 
-                their hotel portfolio.
+      <!-- 4. Key Insights & Recommendations -->
+      <section id="insights">
+        <h2>4. Key Insights & Recommendations</h2>
+        <ul>
+          <li><strong>Flat ADR Trends:</strong> Lack of demand-based pricing led to stagnant Average Daily Rate.</li>
+          <li><strong>Dynamic Pricing Potential:</strong> Implementing weekday/weekend rate differentials can boost ADR and overall revenue.</li>
+          <li> <strong>Property Performance:</strong> Atliq Grands Bangalore & Seasons Mumbai show lowest occupancy and highest cancellations, suggesting review of service quality or pricing strategy.</li>
+          <li> <strong>Strategic Recommendation:</strong> Maintain uniform pricing across OTAs; offer exclusive direct-booking discounts to drive direct revenue and reduce commission costs.</li>
+        </ul>
+      </section>
 
-  
-            </p>
-
-            <hr>
-            <div class="feature-list">
-                <h3>Project Components:</h3>
-                <ol>
-                    <li> Data Modeling & Star Schema Design</li>
-                    <li> Data Visualization & KPI Analysis</li>
-                    <li> Business Insights & Strategic Recommendations</li>
-                </ol>
-            </div>
-
-
-            <hr class="hr">         
-            <div class="steps2">
-                <h3> Data Analysis & Key Insights</h3>
-                <ul>
-                    <li> Hotels were not using demand-based pricing, leading to flat ADR trends.</li>
-                    <li> Introducing dynamic pricing (weekday/weekend) can boost ADR & revenue.</li>
-                    <li> Atliq Grands Bangalore & Atliq Seasons Mumbai had the lowest occupancy & highest cancellation rates, indicating possible service/pricing issues.</li>
-                    <li> Strategy Recommendation: Maintain uniform pricing across platforms (MakeMyTrip, Agoda) & introduce exclusive direct booking discount coupons.</li>
-                </ul>
-            </div>
-
-
-            <hr class="hr">
-            <h3 class="section-title">Repositories & Resources</h3>
-            <p><a href="https://github.com/S1nen/Hospitality-Data-Analysis-And-BI-Dashboard" target="_blank">GitHub Repository</a></p>
-            <p><a href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" target="_blank">Power BI Files</a></p>
-
-            <button onclick="goBack()">⬅ Back to Portfolio</button>
+      <!-- 5. Tech Stack -->
+      <section id="tech-stack">
+        <h2>5. Tech Stack</h2>
+        <div class="tech-grid">
+          <div><strong>Power BI</strong><br><em>Data visualization & reports</em></div>
+          <div><strong>SQL Server</strong><br><em>Relational data storage</em></div>
+          <div><strong>Star Schema</strong><br><em>Data modeling</em></div>
+          <div><strong>DAX</strong><br><em>Advanced calculations</em></div>
         </div>
-    </div>
+      </section>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+      <!-- 6. Deployment -->
+      <section id="deployment">
+        <h2>6. Deployment</h2>
+        <p>
+          The solution is deployed via Power BI Service, enabling stakeholders to access reports securely in the cloud. Role-based access ensures data governance and compliance.
+        </p>
+      </section>
+
+      <!-- 7. Future Enhancements -->
+      <section id="future">
+        <h2>7. Future Enhancements</h2>
+        <ul>
+          <li><strong>Predictive Analytics:</strong> Integrate machine learning models to forecast occupancy and demand.</li>
+          <li> <strong>Mobile-Optimized Reports:</strong> Enhance layouts for on-the-go decision making.</li>
+          <li> <strong>Alerting System:</strong> Real-time notifications for KPI thresholds (e.g., sharp ADR drops).</li>
+          <li> <strong>Natural Language Q&A:</strong> Allow conversational insights via Power BI Q&A feature.</li>
+        </ul>
+      </section>
+
+      <!-- 8. Resources -->
+      <section id="resources">
+        <h2>8. Resources</h2>
+        <p><a href="https://github.com/S1nen/Hospitality-Data-Analysis-And-BI-Dashboard" target="_blank">GitHub Repository</a></p>
+        <p><a href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" target="_blank">Power BI Report & Files</a></p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 </html>
