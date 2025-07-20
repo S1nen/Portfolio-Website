@@ -3,131 +3,264 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales Insights – Computer Hardware Business Deep Dive</title>
-  <link rel="stylesheet" href="hospitality.css" />
+  <title>Sales Insights – Mohammed Sinan</title>
+  <meta name="description" content="Interactive Power BI dashboard for computer hardware sales insights – by Mohammed Sinan." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06141B;
+      --fg: #ffffff;
+      --card: #11212D;
+      --accent: #4A5C6A;
+      --secondary: #ccd0cf;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 620px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      box-shadow: 0 0 30px var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--fg);
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: var(--fg);
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #253745;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--fg);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px var(--shadow);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .card p, .card li {
+      color: var(--secondary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .image-collage img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tech-grid div {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      color: var(--secondary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <!-- <img src="sales ss 1.png" alt="Sales Insights Dashboard" class="hero-img" /> -->
+    <h1>Sales Insights – Computer Hardware Business</h1>
+    <p class="subtitle">An interactive BI dashboard uncovering revenue, trends, and customer behavior for AtliQ Hardware.</p>
+    <a href="https://app.powerbi.com/link-to-your-sales-insights-report" target="_blank" class="cta-btn">View Live Dashboard</a>
+  </header>
+
   <div class="container">
-    <!-- Hero Section -->
-    <header class="project-hero">
-      <div class="hero-text">
-        <h1>Sales Insights – Computer Hardware Business</h1>
-        <p class="subtitle">
-          An interactive BI dashboard that uncovers sales trends, customer behavior, and regional performance to drive revenue growth.
+
+    <section>
+      <h2 class="section-title">1. Project Overview</h2>
+      <div class="card">
+        <p>
+          The Sales Insights dashboard provides a comprehensive view of AtliQ Hardware’s performance. Stakeholders can explore trends, top products, regional stats, and customer behavior to drive strategic decisions and revenue growth.
         </p>
-        <a class="btn-live" href="https://app.powerbi.com/link-to-your-sales-insights-report" target="_blank">
-           View Live Dashboard
-        </a>
       </div>
-      <div class="hero-image">
-        <img src="sales ss 1.png" alt="Sales Insights Dashboard Screenshot" />
+    </section>
+
+    <section>
+      <h2 class="section-title">2. ETL & Data Model</h2>
+      <div class="card">
+        <p>
+          Data was extracted from MySQL, transformed with SQL scripts, and modeled into a star schema:
+        </p>
+        <ul>
+          <li><strong>Fact Sales:</strong> Transaction-level data</li>
+          <li><strong>Dim Products:</strong> Product names and categories</li>
+          <li><strong>Dim Date:</strong> Date/time hierarchy</li>
+          <li><strong>Dim Region:</strong> Regional classification</li>
+        </ul>
       </div>
-    </header>
+    </section>
 
-    <!-- Table of Contents -->
-    <nav class="toc">
-      <ul>
-        <li><a href="#overview">1. Project Overview</a></li>
-        <li><a href="#etl-model">2. ETL & Data Model</a></li>
-        <li><a href="#visualization">3. Dashboard Visualization</a></li>
-        <li><a href="#insights">4. Key Insights & Metrics</a></li>
-        <li><a href="#tech-stack">5. Tech Stack</a></li>
-        <li><a href="#deployment">6. Deployment</a></li>
-        <li><a href="#future">7. Future Enhancements</a></li>
-        <li><a href="#resources">8. Resources</a></li>
-      </ul>
-    </nav>
-
-    <main class="content">
-      <!-- 1. Overview -->
-      <section id="overview">
-        <h2>1. Project Overview</h2>
+    <section>
+      <h2 class="section-title">3. Dashboard Visualization</h2>
+      <div class="card">
         <p>
-          The Sales Insights dashboard for AtliQ Hardware provides a comprehensive view of sales data, enabling stakeholders to track revenue trends, identify top-performing products, and analyze regional and customer purchase behaviors. Designed to support a targeted revenue growth of at least 7% next quarter, it delivers actionable intelligence through intuitive visuals.
+          Includes slicers by region, time, and product. Visuals include sales trend lines, bar charts for best sellers, map views, and KPI cards for revenue, YoY growth, and customer stats.
         </p>
-      </section>
+        <!-- <div class="image-collage">
+          <img src="sales ss 1.png" alt="Sales Dashboard Screenshot" />
+        </div> -->
+      </div>
+    </section>
 
-      <!-- 2. ETL & Data Model -->
-      <section id="etl-model">
-        <h2>2. ETL & Data Model</h2>
-        <p>
-          Data is sourced from the company’s SQL database and processed via ETL routines that clean, transform, and load sales records into a star schema optimized for reporting. Key fact and dimension tables include:
-        </p>
+    <section>
+      <h2 class="section-title">4. Key Insights & Metrics</h2>
+      <div class="card">
         <ul>
-          <li><strong>Fact Sales:</strong> Transaction-level sales data.</li>
-          <li><strong>Dim Products:</strong> Product categories and attributes.</li>
-          <li><strong>Dim Date:</strong> Date hierarchy for time-series analysis.</li>
-          <li><strong>Dim Region:</strong> Geographic segmentation.</li>
+          <li><strong>Seasonal Trends:</strong> Sales peaked during launch and holiday months</li>
+          <li><strong>Top Products:</strong> GPUs and SSDs contributed 30%+ of total revenue</li>
+          <li><strong>Regional Performance:</strong> West leads in AOV; East shows growth potential</li>
+          <li><strong>Customer Behavior:</strong> Repeat buyers have 15% higher order value</li>
+          <li><strong>Growth Target:</strong> Dashboard supports a 7% projected revenue increase</li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- 3. Dashboard Visualization -->
-      <section id="visualization">
-        <h2>3. Dashboard Visualization</h2>
-        <div class="image-collage">
-          <img src="sales ss 1.png" alt="Sales Trend Chart" />
-          <!-- Add more images if available -->
-        </div>
+    <section>
+      <h2 class="section-title">5. Tech Stack</h2>
+      <div class="tech-grid">
+        <div><strong>Power BI</strong><br><em>Interactive dashboarding</em></div>
+        <div><strong>SQL Server</strong><br><em>Data transformation + ETL</em></div>
+        <div><strong>MySQL</strong><br><em>Primary sales data source</em></div>
+        <div><strong>DAX</strong><br><em>Custom measures + KPIs</em></div>
+        <div><strong>Star Schema</strong><br><em>Optimized data model</em></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">6. Deployment</h2>
+      <div class="card">
         <p>
-          The dashboard features dynamic filters for time period, product category, and region. Visual elements include line charts for sales trends, bar charts for top products, map visuals for regional distribution, and KPI cards for quick metrics like total revenue and growth percentage.
+          Published to Power BI Service with role-based access. Scheduled daily refresh keeps the report current for stakeholders across departments.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- 4. Key Insights & Metrics -->
-      <section id="insights">
-        <h2>4. Key Insights & Metrics</h2>
+    <section>
+      <h2 class="section-title">7. Future Enhancements</h2>
+      <div class="card">
         <ul>
-          <li><strong>Seasonal Trends:</strong> Identified peak sales periods during product launch months and holiday seasons.</li>
-          <li><strong>Top Products:</strong> Certain hardware categories (e.g., GPUs, SSDs) consistently contribute over 30% of revenue.</li>
-          <li><strong>Regional Performance:</strong> Western region reports highest average order value; Eastern region shows growth potential.</li>
-          <li><strong>Customer Behavior:</strong> Repeat customers purchase 40% more frequently and have a 15% higher average order value.</li>
-          <li><strong>Revenue Growth:</strong> Dashboard insights support strategies to achieve a projected 7% uplift in the next quarter.</li>
+          <li><strong>Forecasting:</strong> Integrate ML models to project sales trends</li>
+          <li><strong>Mobile View:</strong> Optimize for Power BI mobile app</li>
+          <li><strong>Alerts:</strong> Trigger notifications for KPI breaches</li>
+          <li><strong>NLP Q&A:</strong> Enable natural language queries in Power BI</li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- 5. Tech Stack -->
-      <section id="tech-stack">
-        <h2>5. Tech Stack</h2>
-        <div class="tech-grid">
-          <div><strong>Power BI</strong><br><em>Interactive dashboards & reports</em></div>
-          <div><strong>SQL Server</strong><br><em>ETL & data warehousing</em></div>
-          <div><strong>DAX</strong><br><em>Custom calculations & measures</em></div>
-         <div><strong>MySQL</strong><br><em>Data source for sales records</em></div>
-          <div><strong>Star Schema</strong><br><em>Data modeling</em></div>
-        </div>
-      </section>
+    <section>
+      <h2 class="section-title">8. Resources</h2>
+      <div style="text-align: center;">
+        <a href="https://github.com/S1nen/Sales-Insights-project" target="_blank" class="cta-btn">GitHub Repo</a>
+      </div>
+    </section>
 
-      <!-- 6. Deployment -->
-      <section id="deployment">
-        <h2>6. Deployment</h2>
-        <p>
-          Deployed to Power BI Service with role-based access controls. Scheduled data refresh ensures daily updates, keeping insights current and reliable for decision-making.
-        </p>
-      </section>
-
-      <!-- 7. Future Enhancements -->
-      <section id="future">
-        <h2>7. Future Enhancements</h2>
-        <ul>
-          <li><strong>Predictive Forecasting:</strong> Integrate predictive models to forecast future sales.</li>
-          <li><strong>Mobile Reports:</strong> Optimize dashboards for mobile devices and tablets.</li>
-          <li><strong>Real-Time Alerts:</strong> Configure Power BI data alerts for threshold breaches.</li>
-          <li><strong>Natural Language Q&A:</strong> Enable conversational querying of the sales data.</li>
-        </ul>
-      </section>
-
-      <!-- 8. Resources -->
-      <section id="resources">
-        <h2>8. Resources</h2>
-        <p><a href="https://github.com/S1nen/Sales-Insights-project" target="_blank">GitHub Repository</a></p>
-      </section>
-    </main>
   </div>
 
+  <footer>
+    &copy; <span id="year"></span> Mohammed Sinan. All rights reserved.
+  </footer>
+
   <script>
-    function goBack() {
-      window.history.back();
-    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
