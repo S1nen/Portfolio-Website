@@ -31,7 +31,7 @@ body {
 /* Optional extras */
 .profile-pic-border {
   border: 4px solid #fff;        /* white ring */
-  box-shadow: 0 0 0 3px #0057ff; /* outer accent ring (blue) */
+  box-shadow: 0 0 0 3px #000000; /* outer accent ring (blue) */
 }
 
 
@@ -134,7 +134,7 @@ h3 {
     border-radius: 5px;
     font-size: 12px;
     margin: 3px;
-    color: rgb(72, 72, 247);
+    color: rgb(0, 0, 15);
 }
 
 /* Main Content */
@@ -210,13 +210,13 @@ h3 {
     border-radius: 5px;
     font-size: 12px;
     margin-right: 5px;
-    color: rgb(72, 72, 247);
+    color: rgb(0, 0, 0);
     text-align: left;
 }
 
 .project-info a {
     display: inline-block;
-    color: blue;
+    color: rgb(0, 0, 0);
     margin-top: 5px;
 }
 
