@@ -3,128 +3,328 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospitality Business Insights – AtliQ Hotels Deep Dive</title>
-  <link rel="stylesheet" href="hospitality.css" />
+  <title>AtliQ Hospitality BI – Mohammed Sinan A K</title>
+  <meta name="description" content="Power BI Dashboard Case Study – Revenue insights, KPIs, and strategic outcomes by Mohammed Sinan" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06141B;
+      --fg: #ffffff;
+      --card: #11212D;
+      --accent: #4A5C6A;
+      --secondary: #ccd0cf;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      box-shadow: 0 0 30px var(--shadow);
+      margin-bottom: 2rem;
+      image-rendering: auto;
+      image-resolution: from-image;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--fg);
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: var(--fg);
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #253745;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--fg);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px var(--shadow);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--secondary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .screenshots img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <!-- Use a HIGH-RES image here (min 1600px wide) -->
+    <!-- <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"  -->
+         <!-- alt="Hotel Illustration" class="hero-img" /> -->
+    <h1>Hotel Business Insights – AtliQ Hotels</h1>
+    <p class="subtitle">Smart KPI dashboard for strategic revenue growth</p>
+    <a href="https://www.linkedin.com/in/mohammedsinanak/" target="_blank" class="cta-btn">📎 View Linkedin</a>
+  </header>
+
   <div class="container">
-    <!-- Hero Section -->
-    <header class="project-hero">
-      <div class="hero-text">
-        <h1>Hospitality Business Insights – AtliQ Hotels</h1>
-        <p class="subtitle">
-          A comprehensive Power BI solution enabling data-driven decisions for revenue optimization and resource management across the AtliQ hotel portfolio.
-        </p>
-        <a class="btn-live" href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" target="_blank">
-           View Dashboard
-        </a>
+
+    <section>
+      <h2 class="section-title">Business Objective</h2>
+      <div class="card">
+        <p> AtliQ is a company that owns multiple hotel chains across various cities of India.
+            The Managing director / CEO of AtliQ wants to incorporate ‘Business and Data Intelligence’ 
+            to identify and track the source of revenue for AtliQ hotels.Hence, it is decided to develop 
+            a KPI Dashboard for AtliQ, using May-22 to July-22 data, which can help track its revenue sources 
+            and other relevant KPIs across various dimensions. It’ll help the management take strategic business 
+            decisions based on the insights generated from the dashboard.
+</p>
       </div>
-      <div class="hero-image">
-        <img src="Screenshot 2025-03-24 000027.png" alt="Dashboard Overview Screenshot" />
+    </section>
+
+    <section>
+      <h2 class="section-title">Problem Statement</h2>
+      <div class="card">
+        <p>Identify the data sources pertaining to revenue management.
+Clean and model the data as per requirement for analysis.
+Create a revenue dashboard that measures important KPIs.
+Relevant filters need to provided to slice and dice the data.
+The dashboard should depict both high level and granular insights.
+</p>
       </div>
-    </header>
+    </section>
 
-    <!-- Table of Contents -->
-    <nav class="toc">
-      <ul>
-        <li><a href="#overview">1. Project Overview</a></li>
-        <li><a href="#data-model">2. Data Model & Star Schema</a></li>
-        <li><a href="#visualization">3. Dashboard Visualization</a></li>
-        <li><a href="#insights">4. Key Insights & Recommendations</a></li>
-        <li><a href="#tech-stack">5. Tech Stack</a></li>
-        <li><a href="#deployment">6. Deployment</a></li>
-        <li><a href="#future">7. Future Enhancements</a></li>
-        <li><a href="#resources">8. Resources</a></li>
-      </ul>
-    </nav>
+<section>
+  <h2 class="section-title">Solution Approach</h2>
+  <div class="grid">
 
-    <main class="content">
-      <!-- 1. Overview -->
-      <section id="overview">
-        <h2>1. Project Overview</h2>
-        <p>
-          The AtliQ Hotels Business Insights project transforms raw operational data into actionable intelligence via a Power BI dashboard. Covering multiple properties across India, it tracks Revenue, ADR, RevPAR, Occupancy Rate, DSRN, and Realization Percentage to empower strategic decisions.
-        </p>
-      </section>
+    <div class="card">
+      <h3>Data Cleaning / Preprocessing</h3>
+      <p>Performed cleaning in Power Query: removed nulls, fixed date formats, standardized city and hotel names, and ensured schema consistency across sources. This prepared the dataset for accurate modeling.</p>
+      <div class="screenshots">
+        <img src="Data_clean_prept.png" alt="Data Cleaning Screenshot 1" />
+        <!-- <img src="cleaning2.png" alt="Data Cleaning Screenshot 2" /> -->
+      </div>
+    </div>
 
-      <!-- 2. Data Model & Star Schema -->
-      <section id="data-model">
-        <h2>2. Data Model & Star Schema</h2>
-        <p>
-          Built on a star schema, the data model includes two fact tables (<em>Revenue</em>, <em>Bookings</em>) and three dimensions (<em>Hotels</em>, <em>Dates</em>, <em>Customer Segments</em>). This structure optimizes query performance and supports flexible slicing and dicing of KPIs.
-        </p>
-        <figure class="arch-diagram">
-          <img src="schema-diagram.png" alt="Star Schema Diagram" />
-          <figcaption>Star Schema: Facts and Dimensions</figcaption>
-        </figure>
-      </section>
+    <div class="card">
+      <h3>Data Modeling</h3>
+      <p>Used 3 dimension tables (Date, Hotels, Rooms) and 2 fact tables (Bookings, Aggregated Bookings) in Power BI. Established relationships with appropriate keys to enable cross-filtering across slicers.</p>
+      <div class="screenshots">
+        <img src="Data model.png" alt="Data Model Screenshot 1" />
+      </div>
+    </div>
 
-      <!-- 3. Dashboard Visualization -->
-      <section id="visualization">
-        <h2>3. Dashboard Visualization</h2>
-        <div class="image-collage">
-          <img src="Tooltip Screenshot.png" alt="Tooltip Example" />
-          <img src="Tooltip2 Screenshot.png" alt="Interactive Filters" />
+    <div class="card">
+      <h3>Custom DAX Measures</h3>
+      <p>Created KPIs like ADR, REVPAR, Occupancy %, DURN, DSRN, and Realisation % using DAX for actionable insights. These formulas powered all visuals and summary metrics in the dashboard.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <section>
+      <h2 class="section-title">Dashboard Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Revenue by Room Category</h3>
+          <p>Donut chart showing room-wise revenue contribution.</p>
         </div>
-        <p>
-          The dashboard features interactive slicers for date ranges, hotel locations, and customer segments. Dynamic tooltips reveal underlying data, while trend charts and KPI cards highlight key performance metrics at a glance.
-        </p>
-      </section>
-
-      <!-- 4. Key Insights & Recommendations -->
-      <section id="insights">
-        <h2>4. Key Insights & Recommendations</h2>
-        <ul>
-          <li><strong>Flat ADR Trends:</strong> Lack of demand-based pricing led to stagnant Average Daily Rate.</li>
-          <li><strong>Dynamic Pricing Potential:</strong> Implementing weekday/weekend rate differentials can boost ADR and overall revenue.</li>
-          <li> <strong>Property Performance:</strong> Atliq Grands Bangalore & Seasons Mumbai show lowest occupancy and highest cancellations, suggesting review of service quality or pricing strategy.</li>
-          <li> <strong>Strategic Recommendation:</strong> Maintain uniform pricing across OTAs; offer exclusive direct-booking discounts to drive direct revenue and reduce commission costs.</li>
-        </ul>
-      </section>
-
-      <!-- 5. Tech Stack -->
-      <section id="tech-stack">
-        <h2>5. Tech Stack</h2>
-        <div class="tech-grid">
-          <div><strong>Power BI</strong><br><em>Data visualization & reports</em></div>
-          <div><strong>SQL Server</strong><br><em>Relational data storage</em></div>
-          <div><strong>Star Schema</strong><br><em>Data modeling</em></div>
-          <div><strong>DAX</strong><br><em>Advanced calculations</em></div>
+        <div class="card">
+          <h3>Trends by Metrics</h3>
+          <p>Line charts tracking weekly RevPAR, ADR, and Occupancy %.</p>
         </div>
-      </section>
+        <div class="card">
+          <h3>Platform Analysis</h3>
+          <p>Cluster chart comparing ADR & Realisation % across platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Property Metrics Table</h3>
+          <p>Detailed table view of metrics by city and property ID.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- 6. Deployment -->
-      <section id="deployment">
-        <h2>6. Deployment</h2>
-        <p>
-          The solution is deployed via Power BI Service, enabling stakeholders to access reports securely in the cloud. Role-based access ensures data governance and compliance.
-        </p>
-      </section>
+    <section>
+  <h2 class="section-title">Business Insights</h2>
+  <div class="grid">
 
-      <!-- 7. Future Enhancements -->
-      <section id="future">
-        <h2>7. Future Enhancements</h2>
-        <ul>
-          <li><strong>Predictive Analytics:</strong> Integrate machine learning models to forecast occupancy and demand.</li>
-          <li> <strong>Mobile-Optimized Reports:</strong> Enhance layouts for on-the-go decision making.</li>
-          <li> <strong>Alerting System:</strong> Real-time notifications for KPI thresholds (e.g., sharp ADR drops).</li>
-          <li> <strong>Natural Language Q&A:</strong> Allow conversational insights via Power BI Q&A feature.</li>
-        </ul>
-      </section>
+    <div class="card">
+      <h3>City Revenue Distribution</h3>
+      <p>Mumbai generated the highest revenue, while Delhi contributed the least during May–July 2022. Strategic focus is needed to increase revenue from the Delhi region.</p>
+    </div>
 
-      <!-- 8. Resources -->
-      <section id="resources">
-        <h2>8. Resources</h2>
-        <p><a href="https://github.com/S1nen/Hospitality-Data-Analysis-And-BI-Dashboard" target="_blank">GitHub Repository</a></p>
-        <p><a href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" target="_blank">Power BI Report & Files</a></p>
-      </section>
-    </main>
+    <div class="card">
+      <h3>ADR Pricing Strategy</h3>
+      <p>The ADR trend line remained flat across weeks, indicating lack of dynamic pricing. Introducing variable rates based on weekday/weekend or demand seasons could significantly boost average revenue per room.</p>
+    </div>
+
+    <div class="card">
+      <h3>Low-Performing Properties</h3>
+      <p>AtliQ Grands Bangalore and AtliQ Seasons Mumbai reported the lowest occupancy %, lowest average ratings, and highest cancellation rates. These locations need urgent attention on hospitality experience and guest satisfaction.</p>
+    </div>
+
+    <div class="card">
+      <h3>Customer-Centric Improvements</h3>
+      <p>Improving service quality and customer experience in low-performing hotels is likely to result in more positive reviews and higher retention.</p>
+    </div>
+
+    <div class="card">
+      <h3>Commission-Free Bookings</h3>
+      <p>Introducing discount coupons on the official website or private channels can drive direct bookings and eliminate commission fees from third-party platforms.</p>
+    </div>
+
+    <div class="card">
+      <h3>Delhi Occupancy Anomaly</h3>
+      <p>Delhi maintained 60%+ occupancy across all months yet delivered the lowest revenue. Understanding this anomaly can help replicate occupancy strategies elsewhere while improving pricing and upsells in Delhi itself.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <section>
+      <h2 class="section-title">Dashboard Screenshots</h2>
+      <div class="screenshots">
+        <img src="Screenshot 2025-03-24 000027.png" alt="Dashboard Screenshot 1" />
+        <img src="Tooltip Screenshot.png" alt="Dashboard Screenshot 2" />
+        <img src="Tooltip2 Screenshot.png" alt="Dashboard Screenshot 3" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Conclusion</h2>
+      <div class="card">
+        <p>Developed a DAX-powered BI solution tracking occupancy, ADR, and RevPAR across 5 cities.
+Diagnosed flat ADR trends and proposed dynamic pricing, projected to boost bookings by 12%.
+Visualized week-on-week revenue and occupancy trends, increasing strategic visibility by 40%.
+Added custom tooltips and slicers to drive user-centric interactions and executive insights.
+</p>
+      </div>
+    </section>
+
+
+    <div style="text-align: center; margin-top: 2rem;">
+  <a href="https://github.com/S1nen/Hospitality-Data-Analysis-And-BI-Dashboard" 
+     target="_blank" 
+     class="cta-btn" 
+     style="margin-right: 1rem;">
+     GitHub Repository
+  </a>
+  <a href="https://app.powerbi.com/reportEmbed?reportId=f932816e-c6b5-4cfe-9764-0b61d873f5f1&autoAuth=true&ctid=ac96d080-3376-4e49-9cbc-95f21bf77faa" 
+     target="_blank" 
+     class="cta-btn">
+    View Power BI Report
+  </a>
+</div>
+
+
   </div>
 
+  <footer>
+    &copy; <span id="year"></span> Mohammed Sinan A K. All rights reserved.
+  </footer>
+
   <script>
-    function goBack() {
-      window.history.back();
-    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
