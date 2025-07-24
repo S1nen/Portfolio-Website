@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Chain Automation</title>
+  <meta name="description" content="AI-powered automation for cross-border supply chain optimization using n8n, PostgreSQL, and Quadratic AI – by Mohammed Sinan" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06141B;
+      --fg: #ffffff;
+      --card: #11212D;
+      --accent: #4A5C6A;
+      --secondary: #ccd0cf;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      box-shadow: 0 0 30px var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--fg);
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: var(--fg);
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #253745;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--fg);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px var(--shadow);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--secondary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .screenshots img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Supply Chain Automation – ABC Mart</h1>
+    <p class="subtitle">AI-powered agentic workflows for cross-border supply chain optimization</p>
+    <a href="https://www.linkedin.com/in/mohammedsinanak/" target="_blank" class="cta-btn">View LinkedIn</a>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2 class="section-title">Business Objective</h2>
+      <div class="card">
+        <p>ABC Mart, a fast-growing organic food manufacturer operating in India and New Jersey, faced inefficiencies in managing supermarket order data, affecting inventory planning and customer satisfaction. To address this, we designed a cross-border supply chain automation system to centralize, clean, and analyze order data from multiple geographies using AI and agentic tools.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Problem Statement</h2>
+      <div class="card">
+        <p>The operations team discovered major discrepancies in inventory visibility and fulfillment timelines due to fragmented order data flowing in via emails from USA and India supermarkets. These gaps made it difficult to maintain optimum inventory levels and fulfill orders on time, threatening customer relationships and scalability.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Solution Architecture</h2>
+      <div class="grid">
+
+        <div class="card">
+          <h3>Agentic Automation with n8n</h3>
+          <p>Set up a fully automated workflow using n8n to monitor country-specific Gmail inboxes, extract attached CSV files, parse order data, and push it into a PostgreSQL database for unified access.</p>
+          <div class="screenshots">
+            <img src="n8n.png" alt="n8n Workflow Screenshot" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>PostgreSQL Data Layer</h3>
+          <p>Structured the incoming data into fact and dimension tables for orders, products, and customers.</p>
+        </div>
+
+        <div class="card">
+          <h3>AI Spreadsheet via Quadratic</h3>
+          <p>Connected PostgreSQL to Quadratic AI to run analysis in an AI-powered spreadsheet. Created date and exchange rate tables, merged cleaned data, calculated order values in INR, and engineered KPIs like OTIF%, Fill Rates, and On-time Delivery.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Key Metrics Tracked</h2>
+      <div class="grid">
+        <div class="card"><h3>Order Fulfillment KPIs</h3><p>OTIF %, On-Time %, In-Full %, Volume & Line Fill Rates.</p></div>
+        <div class="card"><h3>Customer Insights</h3><p>Top 5 customers by order value across US and India, mapped with city, OTIF %, and delivery metrics.</p></div>
+        <div class="card"><h3>Financials</h3><p>USD to INR exchange rate adjustments, and total order amount calculations in INR.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Automation Flow Diagram</h2>
+      <div class="screenshots">
+        <img src="supplychainarcht.png" alt="System Architecture Diagram" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Conclusion</h2>
+      <div class="card">
+        <p>Developed a scalable, agentic automation pipeline that integrated emails, databases, and AI spreadsheets to automate supply chain reporting. Improved data reliability, increased visibility across borders, and enabled proactive inventory decisions. Positioned ABC Mart for faster geographic expansion with data-driven logistics.</p>
+      </div>
+    </section>
+
+    <!-- <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://github.com/S1nen/SupplyChain-Automation-QuadraticAI" 
+         target="_blank" 
+         class="cta-btn" 
+         style="margin-right: 1rem;">
+         GitHub Repository
+      </a>
+      <a href="https://quadratic.to/<insert-project-link>" 
+         target="_blank" 
+         class="cta-btn">
+        View Quadratic Report
+      </a>
+    </div> -->
+
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Mohammed Sinan A K. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
