@@ -1,99 +1,74 @@
-/* General Reset */
+/* === General Reset === */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
-.sidebar img {
-    width: 120px;        /* Makes it a square */
-    object-fit: cover;             /* Crops to fill the circle */
-    border-radius: 90%;            /* Circle! */
-    display: block;
-    margin: 1rem 0 0.5rem 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-}
-
-
-/* === Profile Picture ====================================== */
-.profile-pic {
-  width: 120px;          /* size of the avatar */
-  height: 120px;         /* keep the same as width for a perfect circle */
-  border-radius: 50%;    /* <-- magic that makes it round */
-  object-fit: cover;     /* crops and fills the circle without distortion */
-  display: block;        /* removes inline-img bottom gap */
-  margin: 0 auto 1rem;   /* centers in its container, adds bottom space */
-}
-
-/* Optional extras */
-.profile-pic-border {
-  border: 4px solid #fff;        /* white ring */
-  box-shadow: 0 0 0 3px #000000; /* outer accent ring (blue) */
-}
-
-
-
-/* Layout */
+/* === Layout === */
 .container {
     display: flex;
     max-width: 1000px;
     margin: 20px auto;
-    background: white;
+    background: #2a2a2a;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border: 6px solid;
-    /* border-color: #e7d9d9; */
-    border-color:rgb(180, 125, 125);
-    border-image-slice: 1;
-    padding: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #333;
+    padding: 10px;
 }
 
-/* Sidebar */
+/* === Sidebar === */
 .sidebar {
     width: 30%;
-    background: #f8f9fa;
+    background: #121212;
     padding: 20px;
-    text-align: left;
+    text-align: center;
 }
 
-.profile-img {
-    width: 100px;
-    height: 100px;
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 50%;
     display: block;
-    margin: 0 auto 10px;
+    margin: 1rem auto;
+    border: 4px solid #fff;                  /* White inner ring */
+    box-shadow: 0 0 0 3px #1a3a5f;           /* Outer dark blue ring */
 }
 
+/* === Headings === */
 h3 {
     font-size: 20px;
-    text-align:left;
+    color: #f2f2f2;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
- .new {
+.new {
     font-size: 12px;
-    text-align: left;
-    color:black;
+    text-align: center;
+    color: #bbb;
 }
 
 .location {
-    text-align: left;
+    text-align: center;
     font-size: 12px;
-    color: #777;
+    color: #888;
     margin-bottom: 15px;
 }
 
+/* === Social Links === */
 .social-links {
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .social-links a {
     display: inline-block;
-    margin: 0 0px;
+    margin: 0 8px;
 }
 
 .social-links img {
@@ -103,184 +78,172 @@ h3 {
 }
 
 .social-links img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
-
-/* About and Skills */
+/* === About & Skills === */
 .about, .skills {
     margin-bottom: 20px;
 }
 
- .skillhd {
+.abouthd, .skillhd {
     font-size: 14px;
     margin-bottom: 5px;
-    color: #666;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.abouthd {
-    font-size: 14px;
-    margin-bottom: 3px;
-    color: #666;
-}
-.about p{
-    font-size: small;
+.about p {
+    font-size: 13px;
+    color: #ccc;
 }
 
 .skills span {
     display: inline-block;
-    background: #daebfb;
-    padding: 5px 8px;
+    background: #1a3a5f;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
-    margin: 3px;
-    color: rgb(0, 0, 15);
+    margin: 4px 4px;
+    color: #f0f8ff;
 }
 
-/* Main Content */
+/* === Main Content === */
 .content {
     width: 70%;
     padding: 20px;
+    background-color: #1c1c1c;
 }
 
-/* Projects Section */
+/* === Headings === */
 .projects h2, .experience h2 {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #333;
+    color: #e5e5e5;
 }
 
-/* Projects Section */
+/* === Project / Experience Cards === */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two projects in a row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .project-card {
     width: 100%;
-    background: white;
+    background: #2f2f2f;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+    border: 1px solid #3a3a3a;
 }
 
 .project-img {
     width: 100%;
-    height: 160px; /* Adjusted size */
+    height: 160px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
     margin-bottom: 10px;
 }
 
-/* Ensuring only two projects appear on top */
-.project-card:nth-child(1),
-.project-card:nth-child(2) {
-    grid-column: span 1;
-}
-
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr; /* Stack all projects on small screens */
-    }
-
-    .project-card:nth-child(n+3) {
-        grid-column: span 1;
-    }
-}
-
-
+/* === Card Text === */
 .project-info h3 {
     font-size: 16px;
-    color: #333;
+    color: #e0e0e0;
+    margin-bottom: 6px;
 }
 
 .project-info p {
-    font-size: 14px;
-    color: #666;
+    font-size: 13px;
+    color: #bdbdbd;
     margin-bottom: 10px;
 }
 
-.tags span {
-    background: #daebfb;
-    padding: 1px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-right: 5px;
-    color: rgb(0, 0, 0);
-    text-align: left;
+/* === Project Skill Tags (Neatly Aligned) === */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
 
+.tags span {
+    background: #1f4c73;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #dbeeff;
+    margin: 4px;
+}
+
+/* === Links === */
 .project-info a {
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: #9fd4ff;
     margin-top: 5px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
-/* Experience */
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+/* === Experience Section === */
 .experience .job {
     margin-bottom: 1px;
 }
 
-.experience .exphd{
+.experience .exphd {
     font-size: 13px;
-    margin-bottom: 0px;
-    color: #666;
+    color: #ccc;
 }
 
 .experience p {
     font-size: 14px;
-    color: #555;
-    margin-top:7px;
+    color: #aaa;
+    margin-top: 7px;
 }
 
-.experience h5, .education h5{
+.experience h5, .education h5 {
     margin-top: -12px;
+    color: #e6e6e6;
 }
 
-/* Education */
+/* === Education Section === */
 .education .school {
     margin-bottom: 15px;
 }
 
-.eduhd{
+.eduhd {
     font-size: 13px;
     margin-bottom: 5px;
-    color: #666;
+    color: #aaa;
 }
 
 .education p {
     font-size: 14px;
-    color: #555;
+    color: #bbb;
     margin-top: 7px;
 }
 
-
-/* Responsive Design */
+/* === Responsive === */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
-    .sidebar {
-        width: 100%;
-        text-align: center;
-    }
-
-    .content {
+    .sidebar, .content {
         width: 100%;
     }
 
     .projects-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .project-card {
         width: 100%;
     }
 }
-
-
