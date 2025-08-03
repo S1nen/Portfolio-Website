@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Food Ordering Chatbot – Mohammed Sinan</title>
-  <meta name="description" content="Chatbot powered by NLP, FastAPI and MySQL to automate food ordering via natural language." />
+  <meta name="description" content="Conversational chatbot built with Dialogflow, FastAPI, and MySQL for automating hotel food ordering systems." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -37,7 +37,7 @@
 
     .hero-img {
       width: 100%;
-      max-height: 550px;
+      max-height: 300px;
       object-fit: cover;
       object-position: center;
       border-radius: 12px;
@@ -46,7 +46,7 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       font-weight: 900;
       color: var(--fg);
     }
@@ -114,7 +114,7 @@
       color: var(--accent);
     }
 
-    .card p, .card li {
+    .card p {
       color: var(--secondary);
     }
 
@@ -124,11 +124,22 @@
       gap: 2rem;
     }
 
-    .screenshot {
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .screenshots img {
       width: 100%;
       border-radius: 12px;
-      margin-top: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -142,121 +153,97 @@
 <body>
 
   <header>
-    <img src="foodbot_ss.png" alt="Chatbot Screenshot" class="hero-img" />
+    <img src="foodbot_ss.png" alt="Food Chatbot UI Screenshot" class="hero-img" />
     <h1>Food Ordering Chatbot</h1>
-    <p class="subtitle">Conversational assistant using NLP + FastAPI + MySQL .</p>
+    <p class="subtitle">Conversational interface using Dialogflow, FastAPI, and MySQL</p>
     <a href="https://foodbot-frontend-ujcj.onrender.com" target="_blank" class="cta-btn">Try Live Demo</a>
   </header>
 
   <div class="container">
 
     <section>
-      <h2 class="section-title">Project Overview</h2>
+      <h2 class="section-title">Project Objective</h2>
       <div class="card">
-        <p>This food-ordering chatbot transforms static hotel websites into a <strong>smart conversational interface</strong>. It uses Dialogflow (NLP), FastAPI (backend), and MySQL (database) to let customers place, track, and cancel orders in plain English—no dropdowns or forms.</p>
+        <p>Many hotel websites offer static menus and basic forms. This project replaces that with a smart chatbot that allows users to place, modify, and track food orders using natural language. It eliminates the need for manual browsing or calling support.</p>
       </div>
     </section>
 
     <section>
       <h2 class="section-title">Problem Statement</h2>
       <div class="card">
-        <ul>
-          <li>Static websites require users to manually browse menus.</li>
-          <li>Menu changes need developer effort and redeployment.</li>
-          <li>Support staff are often needed for tracking/canceling orders.</li>
+        <p>Static food ordering systems come with three key limitations:</p>
+        <ul style="color: var(--secondary); margin-left: 1rem; padding-top: 0.5rem;">
+          <li>Users must browse menus manually, often leading to drop-offs</li>
+          <li>Every menu update needs developer involvement</li>
+          <li>Order tracking or cancellation requires staff support</li>
         </ul>
-        <p>This leads to user friction and wasted business hours. We needed automation that feels human and scalable.</p>
+        <p style="margin-top: 1rem;">This increases friction for users and overhead for businesses. A scalable and intuitive solution was needed.</p>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Solution Approach</h2>
+      <h2 class="section-title">Solution Breakdown</h2>
       <div class="grid">
         <div class="card">
-          <h3>Order Placement</h3>
-          <p>Natural language interface to view menu, add/remove items, confirm orders.</p>
+          <h3>Dialogflow (NLP)</h3>
+          <p>Detects user intent and manages conversational context. Triggers webhook calls to FastAPI.</p>
+        </div>
+        <div class="card">
+          <h3>FastAPI Backend</h3>
+          <p>Acts as middleware. Handles logic for menu items, cart session, order status, and cancellation.</p>
+        </div>
+        <div class="card">
+          <h3>MySQL Database</h3>
+          <p>Stores menu and order data. Uses stored procedures to ensure atomic transactions and rollback safety.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Natural Language Orders</h3>
+          <p>Users place, edit, and cancel food orders with plain English commands.</p>
+        </div>
+        <div class="card">
+          <h3>Dynamic Menu from DB</h3>
+          <p>Menus are loaded directly from the database. No frontend deployment needed for changes.</p>
         </div>
         <div class="card">
           <h3>Order Tracking</h3>
-          <p>Real-time order status lookup via unique order ID from chat.</p>
+          <p>Users can check order status with a unique order ID.</p>
+        </div>
+        <div class="card">
+          <h3>Session-Based Cart</h3>
+          <p>Temporary cart lets users build an order over multiple messages.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Architecture & Data Flow</h2>
+      <h2 class="section-title">Architecture Overview</h2>
       <div class="card">
-        <p>
-          <strong>Dialogflow</strong> handles intent detection & session context.<br>
-          <strong>FastAPI</strong> acts as a middleware routing logic and commands.<br>
-          <strong>MySQL</strong> persists order data with stored procedures for atomic transactions.
-        </p>
-        <img src="ARchitecture.png" alt="Architecture Diagram" class="screenshot" />
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Key Features</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Conversational UX</h3>
-          <p>Graceful fallbacks and error handling improve user experience.</p>
-        </div>
-        <div class="card">
-          <h3>Dynamic Menu</h3>
-          <p>Menu items are read directly from DB—no redeployment needed for updates.</p>
-        </div>
-        <div class="card">
-          <h3>Atomic Operations</h3>
-          <p>Stored procedures ensure reliable add/remove with rollback on failure.</p>
-        </div>
-        <div class="card">
-          <h3>In-Memory Cart</h3>
-          <p>Session-based cart storage lets users build orders before final confirmation.</p>
+        <p>Dialogflow captures user intent → FastAPI processes logic → MySQL stores and retrieves order data. The entire flow is stateless and scalable for future features like payments or voice input.</p>
+        <div class="screenshots">
+          <img src="ARchitecture.png" alt="System Architecture Diagram" />
         </div>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="grid">
-        <div class="card"><h3>Dialogflow ES</h3><p>Intent mapping & context control</p></div>
-        <div class="card"><h3>FastAPI</h3><p>Async Python backend routing</p></div>
-        <div class="card"><h3>MySQL</h3><p>Order DB with stored procedures</p></div>
-        <div class="card"><h3>Render</h3><p>Live deployment platform</p></div>
-        <div class="card"><h3>Cloudflare Tunnel</h3><p>Secure local testing</p></div>
-        <div class="card"><h3>HTML/CSS</h3><p>Frontend and embedded chat</p></div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Deployment & CI/CD</h2>
+      <h2 class="section-title">CI/CD & Deployment</h2>
       <div class="card">
-        <p>
-          Local Dev: `uvicorn main:app` with Cloudflare tunnel<br>
-          Production: Deployed on Render with SSL<br>
-          CI/CD: GitHub Actions for test & deploy automation
-        </p>
+        <p>Local development is done with `uvicorn main:app` tunneled through Cloudflare. The full app is deployed on Render with SSL, and GitHub Actions handles test and deployment automation.</p>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Future Enhancements</h2>
-      <div class="card">
-        <ul>
-          <li>Payment gateway (Stripe, Razorpay)</li>
-          <li>Multi-lingual support (Hindi, Spanish, etc.)</li>
-          <li>Analytics dashboard for trends and behavior</li>
-          <li>Voice-based ordering via Dialogflow Voice</li>
-        </ul>
-      </div>
-    </section>
 
     <section>
-      <h2 class="section-title">Repos & Resources</h2>
+      <h2 class="section-title">Links & Resources</h2>
       <div style="text-align: center;">
-        <a href="https://github.com/S1nen/Food-Chatbot" target="_blank" class="cta-btn" style="margin-right: 1rem;">GitHub Repo</a>
-        <a href="https://foodbot-frontend-ujcj.onrender.com" target="_blank" class="cta-btn">Live Demo</a>
+        <a href="https://github.com/S1nen/Food-Chatbot" target="_blank" class="cta-btn" style="margin-right: 1rem;">GitHub Repository</a>
+        <a href="https://foodbot-frontend-ujcj.onrender.com" target="_blank" class="cta-btn">Live Chatbot Demo</a>
       </div>
     </section>
 
@@ -272,4 +259,3 @@
 
 </body>
 </html>
-
