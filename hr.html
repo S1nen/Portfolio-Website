@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>HR Analytics and Insights Dashboard – Mohammed Sinan A K</title>
+  <meta name="description" content="Tableau HR Dashboard Case Study – Workforce metrics, demographics, salary analysis, and detailed employee records by Mohammed Sinan" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06141B;
+      --fg: #ffffff;
+      --card: #11212D;
+      --accent: #03c4a1;
+      --secondary: #ccd0cf;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--fg);
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: var(--fg);
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: #029a82;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2.section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--fg);
+    }
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px var(--shadow);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .card p {
+      color: var(--secondary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+
+    /* Centering stage for Tableau dashboards */
+    .viz-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      padding: 2rem 0;
+    }
+
+    /* Fixed-size frames to prevent cutting and avoid scrollbars inside the viz */
+    .viz-frame {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      background: #10151a;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Specific sizes for each dashboard */
+    .viz-summary {
+      width: 1440px;
+      height: 800px;
+    }
+    .viz-detailed {
+      width: 1400px;
+      height: 827px;
+    }
+
+    /* Optional label styles */
+    .viz-label {
+      text-align: center;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HR Analytics and Insights Dashboard</h1>
+    <p class="subtitle">Interactive Tableau dashboards for workforce, salary, demographics, and detailed employee records</p>
+    <a href="https://www.linkedin.com/in/mohammedsinanak/" target="_blank" class="cta-btn">📎 View LinkedIn</a>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 class="section-title">Business Objective</h2>
+      <div class="card">
+        <p>
+          The HR department required a centralized analytics solution to monitor workforce metrics, understand demographics, analyze salaries, and maintain detailed employee records. The goal was to provide both high-level summaries for strategic decisions and detailed employee-level data for operational needs.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Problem Statement</h2>
+      <div class="card">
+        <p>
+          Aggregate HR data from multiple sources into a single platform. Build interactive dashboards with Overview, Demographics, and Income Analysis sections, along with a detailed Employee Records view. Enable filters, visual comparisons, and cross-section analysis to help HR managers identify workforce trends, salary disparities, and performance correlations.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Dashboard Features</h2>
+      <div class="grid">
+        <div class="card"><h3>Overview</h3><p>KPI tiles for hires, active employees, and terminations; time-series trends; department and job title breakdown; HQ vs branch distribution; city and state maps.</p></div>
+        <div class="card"><h3>Demographics</h3><p>Gender ratio, age group and education distributions, counts per category, and education-performance correlation visualizations.</p></div>
+        <div class="card"><h3>Income Analysis</h3><p>Salary comparisons by education and gender; age vs salary trends per department to highlight pay gaps and anomalies.</p></div>
+        <div class="card"><h3>Employee Records</h3><p>Filterable table with employee name, department, position, gender, age, education, and salary for granular lookups.</p></div>
+      </div>
+    </section>
+
+    <div class="zoom-reminder" style="color: var(--secondary); margin-bottom: 2rem;">
+      Tip: For best viewing experience on smaller screens, use Ctrl– (Windows) or Cmd– (Mac)
+    </div>
+  </div>
+
+  <!-- SUMMARY dashboard (1440x800) -->
+  <div class="viz-stage">
+    <div class="viz-frame viz-summary">
+      <noscript>
+        <a href="#">
+          <img alt="SUMMARY | DASHBOARD"
+               src="https://public.tableau.com/static/images/HR/HRSUMMARYDASHBOARD_17547606718660/SUMMARYDASHBOARD/1_rss.png"
+               style="border: none; width: 100%; height: 100%;" />
+        </a>
+      </noscript>
+      <object class="tableauViz" style="width: 1440px; height: 800px;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="HRSUMMARYDASHBOARD_17547606718660/SUMMARYDASHBOARD?:showVizHome=no&:device=desktop&:embed=y" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="no" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+      </object>
+    </div>
+  </div>
+  <div class="viz-label">Summary Dashboard (1440×800)</div>
+
+  <!-- DETAILED dashboard (1400x827) -->
+  <div class="viz-stage">
+    <div class="viz-frame viz-detailed">
+      <noscript>
+        <a href="#">
+          <img alt="DETAILED | DASHBOARD"
+               src="https://public.tableau.com/static/images/HR/HREMPLOYEEDETAILED/DETAILEDDASHBOARD/1_rss.png"
+               style="border: none; width: 100%; height: 100%;" />
+        </a>
+      </noscript>
+      <object class="tableauViz" style="width: 1400px; height: 827px;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="HREMPLOYEEDETAILED/DETAILEDDASHBOARD" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/HR/HREMPLOYEEDETAILED/DETAILEDDASHBOARD/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+      </object>
+    </div>
+  </div>
+  <div class="viz-label">Detailed Dashboard (1400×827)</div>
+
+  <div class="container">
+    <section>
+      <h2 class="section-title">Conclusion</h2>
+      <div class="card">
+        <p>
+          Delivered a full-scale Tableau HR analytics suite enabling executives to monitor workforce trends, demographics, salaries, and detailed records in real time—consolidating multiple datasets into interactive dashboards for faster decision-making.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Mohammed Sinan A K. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Tableau script loader -->
+  <script type="text/javascript">
+    (function() {
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      document.body.appendChild(scriptElement);
+    })();
+  </script>
+</body>
+</html>
