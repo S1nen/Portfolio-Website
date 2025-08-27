@@ -3,153 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Data Analysis– Mohammed Sinan A K</title>
+  <title>AtliQ Hospitality BI – Mohammed Sinan A K</title>
   <meta name="description" content="Power BI Dashboard Case Study – Revenue insights, KPIs, and strategic outcomes by Mohammed Sinan" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #06141B;
-      --fg: #ffffff;
-      --card: #11212D;
-      --accent: #4A5C6A;
-      --secondary: #ccd0cf;
-      --shadow: rgba(0, 0, 0, 0.4);
-    }
+  --bg: #000000;       /* black background */
+  --fg: #ffffff;       /* white text */
+  --card: #111111;     /* dark card background */
+  --accent: #4A5C6A;   /* button & heading accent */
+  --secondary: #cccccc;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem; /* more space on top */
+}
 
-    .hero-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 12px;
-      box-shadow: 0 0 30px var(--shadow);
-      margin-bottom: 2rem;
-      image-rendering: auto;
-      image-resolution: from-image;
-    }
+.hero-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
 
-    h1 {
-      font-size: 2.75rem;
-      font-weight: 900;
-      color: var(--fg);
-    }
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
 
-    p.subtitle {
-      font-size: 1.2rem;
-      color: var(--secondary);
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-    }
+p.subtitle {
+  font-size: 1rem;
+  color: var(--fg);
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+}
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--accent);
-      color: var(--fg);
-      font-weight: 700;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
 
-    .cta-btn:hover {
-      background: #253745;
-    }
+.dashboard-embed {
+  text-align: center; /* centers iframe */
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
+.dashboard-embed iframe {
+  width: 100%;       /* take full width of container */
+  max-width: 1200px; /* set a max so it doesn’t get too wide */
+  height: 500px;
+  display: inline-block;
+}
 
-    section {
-      margin-bottom: 3rem;
-    }
 
-    h2.section-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 1rem;
-      color: var(--fg);
-    }
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem; /* more padding */
+}
 
-    .card {
-      background: var(--card);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px var(--shadow);
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+section {
+  margin-bottom: 1.5rem; /* increased space between sections */
+  padding-bottom: 1.5rem;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px var(--shadow);
-    }
+h2.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent); /* underline instead of box */
+}
 
-    .card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
+.card {
+  padding: 0; /* removed background box */
+  margin-bottom: 1.5rem;
+}
 
-    .card p {
-      color: var(--secondary);
-    }
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
+.card p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
 
-    .screenshots {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
 
-    .screenshots img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
-    }
+.screenshots img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
 
-    .screenshots img:hover {
-      transform: scale(1.03);
-    }
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: var(--secondary);
-    }
   </style>
 </head>
 <body>
@@ -158,7 +141,7 @@
     <!-- Use a HIGH-RES image here (min 1600px wide) -->
     <!-- <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"  -->
          <!-- alt="Hotel Illustration" class="hero-img" /> -->
-    <h1>Hotel Data Analysis</h1>
+    <h1>Hotel Business Data Analysis</h1>
     <p class="subtitle">Smart KPI dashboard for strategic revenue growth</p>
     <a href="https://www.linkedin.com/in/mohammedsinanak/" target="_blank" class="cta-btn">View Linkedin</a>
   </header>
@@ -280,13 +263,24 @@ The dashboard should depict both high level and granular insights.
 </section>
 
 
-   
+
 <section>
   <h2 class="section-title"> Power BI Report</h2>
   <div class="dashboard-embed">
-    <iframe title="Power BI Dashboard" width="1100" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiODhiNTgxZGEtM2Q0Zi00NDQ4LTk4MzUtZWM0MmM4YjVjNTYyIiwidCI6ImU0MDhkYzg1LTgwMmMtNGFiMy1hNDUyLTAxN2E4ZDQyNTk2NiJ9&pageName=87c4a96a3674ac3b7baa" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe title="Power BI Dashboard"  src="https://app.powerbi.com/view?r=eyJrIjoiODhiNTgxZGEtM2Q0Zi00NDQ4LTk4MzUtZWM0MmM4YjVjNTYyIiwidCI6ImU0MDhkYzg1LTgwMmMtNGFiMy1hNDUyLTAxN2E4ZDQyNTk2NiJ9&pageName=87c4a96a3674ac3b7baa" frameborder="0" allowFullScreen="true"></iframe>
   </div>
 </section>
+
+
+<!-- 
+    <section>
+      <h2 class="section-title">Dashboard Screenshots</h2>
+      <div class="screenshots">
+        <img src="Screenshot 2025-03-24 000027.png" alt="Dashboard Screenshot 1" />
+        <img src="Tooltip Screenshot.png" alt="Dashboard Screenshot 2" />
+        <img src="Tooltip2 Screenshot.png" alt="Dashboard Screenshot 3" />
+      </div>
+    </section> -->
 
     <section>
       <h2 class="section-title">Conclusion</h2>
@@ -317,14 +311,13 @@ Added custom tooltips and slicers to drive user-centric interactions and executi
 
   </div>
 
-<!--   <footer>
-    &copy; <span id="year"></span> Mohammed Sinan A K. All rights reserved.
-  </footer>
- -->
+<!--  <footer>-->
+<!--    &copy; <span id="year"></span> Mohammed Sinan A K. All rights reserved.-->
+<!--  </footer>-->
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
 </html>
-
