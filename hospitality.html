@@ -133,6 +133,19 @@ footer {
   color: var(--secondary);
 }
 
+.full-width-img {
+  grid-column: 1 / -1; /* make it span across the full grid width */
+}
+
+.big-screenshot img {
+  width: 100%;
+  max-width: 1200px; /* same size as dashboard */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
   </style>
 </head>
 <body>
@@ -177,22 +190,22 @@ The dashboard should depict both high level and granular insights.
   <h2 class="section-title">Solution Approach</h2>
   <div class="grid">
 
-    <div class="card">
-      <h3>Data Cleaning / Preprocessing</h3>
-      <p>Performed cleaning in Power Query: removed nulls, fixed date formats, standardized city and hotel names, and ensured schema consistency across sources. This prepared the dataset for accurate modeling.</p>
-      <div class="screenshots">
-        <img src="Data_clean_prept.png" alt="Data Cleaning Screenshot 1" />
-        <!-- <img src="cleaning2.png" alt="Data Cleaning Screenshot 2" /> -->
-      </div>
-    </div>
+      <div class="card full-width-img">
+  <h3>Data Cleaning / Preprocessing</h3>
+  <p>Performed cleaning in Power Query: removed nulls, fixed date formats, standardized city and hotel names, and ensured schema consistency across sources. This prepared the dataset for accurate modeling.</p>
+  <div class="big-screenshot">
+    <img src="Data_clean_prept.png" alt="Data Cleaning Screenshot" />
+    <!-- <img src="cleaning2.png" alt="Data Cleaning Screenshot 2" /> -->
+  </div>
+</div>
 
-    <div class="card">
-      <h3>Data Modeling</h3>
-      <p>Used 3 dimension tables (Date, Hotels, Rooms) and 2 fact tables (Bookings, Aggregated Bookings) in Power BI. Established relationships with appropriate keys to enable cross-filtering across slicers.</p>
-      <div class="screenshots">
-        <img src="Data model.png" alt="Data Model Screenshot 1" />
-      </div>
-    </div>
+     <div class="card full-width-img">
+  <h3>Data Modeling</h3>
+  <p>Used 3 dimension tables (Date, Hotels, Rooms) and 2 fact tables (Bookings, Aggregated Bookings) in Power BI. Established relationships with appropriate keys to enable cross-filtering across slicers.</p>
+  <div class="big-screenshot">
+    <img src="Data model.png" alt="Data Model Screenshot" />
+  </div>
+</div>
 
     <div class="card">
       <h3>Custom DAX Measures</h3>
@@ -321,4 +334,5 @@ Added custom tooltips and slicers to drive user-centric interactions and executi
 
 </body>
 </html>
+
 
