@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel Data Cleaning – Mohammed Sinan A K</title>
+  <meta name="description" content="Excel Data Cleaning and Dashboard Project – Freelancer workforce analysis by Mohammed Sinan" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --card: #111111;
+  --accent: #4A5C6A;
+  --secondary: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+p.subtitle {
+  font-size: 1rem;
+  color: var(--fg);
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dashboard-embed {
+  text-align: center;
+}
+
+.dashboard-embed iframe {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  display: inline-block;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+h2.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.card {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshots img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.full-width-img {
+  grid-column: 1 / -1;
+}
+
+.big-screenshot img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Data Cleaning and Dashboard Using Excel</h1>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2 class="section-title">Business Objective</h2>
+      <div class="card">
+        <p>The goal was to clean and analyze a messy freelancer dataset containing inconsistent, incomplete, and duplicate records. The final output needed to provide a clear dashboard of freelancer demographics, skills, performance, and demand trends to support decision-making.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Problem Statement</h2>
+      <div class="card">
+        <p>The dataset included missing values, duplicates, inconsistent formatting, and unstandardized categorical fields. The challenge was to transform the raw data into a structured and reliable format for accurate analysis and visualization.</p>
+      </div>
+    </section>
+
+<section>
+  <h2 class="section-title">Solution Approach</h2>
+  <div class="grid">
+
+   <div class="card full-width-img">
+  <h3>Data Cleaning</h3>
+  <p>Removed missing values, duplicates, and fixed inconsistencies in categorical and numerical fields. Transformed columns such as country, gender, and status.</p>
+  <div class="big-screenshot">
+    <img src="excel_unclean.png" alt="Excel Cleaning Screenshot" />
+  </div>
+</div>
+
+   <div class="card full-width-img">
+  <h3>Data Structuring</h3>
+  <p>Organized cleaned data into a structured format ready for analysis.</p>
+  <div class="big-screenshot">
+    <img src="Excel_cleaned.png" alt="Structured Data Screenshot" />
+  </div>
+</div>
+
+    <div class="card">
+      <h3>Visualization</h3>
+      <p>Created Pivot Tables and charts to explore workforce distribution by skills, geography, experience, and satisfaction levels.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard</h3>
+      <p>Developed an Excel dashboard showcasing freelancer demographics, skills demand, and performance metrics in an interactive and easy-to-read format.</p>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <h2 class="section-title">Dashboard Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Skill Distribution</h3>
+          <p>Analyzed how freelancer skills are spread across different categories.</p>
+        </div>
+        <div class="card">
+          <h3>Geography Insights</h3>
+          <p>Visualized freelancer availability across countries and regions.</p>
+        </div>
+        <div class="card">
+          <h3>Experience Levels</h3>
+          <p>Charts showing freelancer experience bands and their hourly rates.</p>
+        </div>
+        <div class="card">
+          <h3>Performance Metrics</h3>
+          <p>Dashboard included satisfaction scores and ratings for evaluating quality.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+  <h2 class="section-title">Business Insights</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Preprocessed Data</h3>
+      <p>Transformed raw freelancer data into a clean, reliable dataset, removing inconsistencies and improving accuracy for reporting.</p>
+    </div>
+
+    <div class="card">
+      <h3>Skill Demand</h3>
+      <p>Identified high-demand skills across regions, supporting better hiring and project allocation strategies.</p>
+    </div>
+
+    <div class="card">
+      <h3>Geography Patterns</h3>
+      <p>Highlighted regions with strong freelancer supply, guiding resource planning and recruitment focus.</p>
+    </div>
+
+    <div class="card">
+      <h3>Performance Trends</h3>
+      <p>Revealed how freelancer ratings and satisfaction scores correlated with experience and hourly rates.</p>
+    </div>
+
+  </div>
+</section>
+
+<!--    <section>-->
+<!--      <h2 class="section-title">Conclusion</h2>-->
+<!--      <div class="card">-->
+<!--        <p>Cleaned and standardized 1,000+ freelancer profiles by handling missing values, duplicates, and inconsistencies.-->
+<!--Standardized categorical fields, normalized numerical values, and visualized insights via Pivot Tables, charts, and dashboards.-->
+<!--Delivered an Excel dashboard highlighting demographics, skills demand, and performance trends for better workforce insights.</p>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <div style="text-align: center; margin-top: 2rem;">
+  <a href="https://github.com/S1nen/Data-Cleaning-And-Dashboard-Using-Excel"
+     target="_blank"
+     class="cta-btn"
+     style="margin-right: 1rem;">
+     GitHub Repository
+  </a>
+</div>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
