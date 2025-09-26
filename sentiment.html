@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiment Analysis System – Mohammed Sinan A K</title>
+  <meta name="description" content="NLP and Machine Learning Case Study – Sentiment Analysis system by Mohammed Sinan" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --card: #111111;
+  --accent: #4A5C6A;
+  --secondary: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+p.subtitle {
+  font-size: 1rem;
+  color: var(--fg);
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+h2.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.card {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshots img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.big-screenshot img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sentiment Analysis System</h1>
+    <p class="subtitle">Sentiment Analysis machine learning system for text classification</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2 class="section-title">Business Objective</h2>
+      <div class="card">
+        <p>
+          The goal of this project was to design a sentiment analysis system that can classify text into positive or negative categories.
+          Businesses can use such a system to monitor customer reviews, track social media feedback, and measure overall customer satisfaction in real time.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Problem Statement</h2>
+      <div class="card">
+        <p>
+          Customer feedback data is unstructured and difficult to analyze manually at scale.
+          A robust automated system is required to preprocess text, extract features, train machine learning models, and deliver accurate predictions through an accessible interface.
+        </p>
+      </div>
+    </section>
+
+<section>
+  <h2 class="section-title">Solution Approach</h2>
+  <div class="grid">
+
+   <div class="card">
+  <h3>Data Preprocessing</h3>
+  <p>
+    Cleaned raw text using tokenization, stopword removal, and lemmatization.
+    Applied TF-IDF vectorization to convert text into numerical features for modeling.
+  </p>
+</div>
+
+   <div class="card">
+  <h3>Model Development</h3>
+  <p>
+    Implemented multiple machine learning models including RandomForest, XGBoost Classifier and
+    Compared their performance and optimized hyperparameters for best accuracy.
+  </p>
+</div>
+
+    <div class="card">
+      <h3>Evaluation</h3>
+      <p>
+        Evaluated models using accuracy, precision, recall, and F1-score.
+        Achieved over 90% accuracy with the optimized model and analyzed performance with a confusion matrix.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <h2 class="section-title">System Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Real-time Predictions</h3>
+          <p>Instant classification of text into positive or negative sentiment.</p>
+        </div>
+        <div class="card">
+          <h3>Data Visualization</h3>
+          <p>Confusion matrix and metric reports to evaluate classifier performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+  <h2 class="section-title">Key Insights</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>High Accuracy</h3>
+      <p>Achieved 90+ accuracy using TF-IDF with XGBoost Classifier after hyperparameter tuning.</p>
+    </div>
+
+    <div class="card">
+      <h3>Preprocessing Impact</h3>
+      <p>Cleaning steps like lemmatization and stopword removal boosted accuracy</p>
+    </div>
+
+    <div class="card">
+      <h3>Model Comparison</h3>
+      <p>XGBoost outperformed RandomForest in precision-recall comparison</p>
+    </div>
+
+    <div class="card">
+      <h3>Scalability</h3>
+      <p>The system design allows future extension to multi-class sentiment (positive, negative, neutral).</p>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <h2 class="section-title">Conclusion</h2>
+      <div class="card">
+        <p>
+          Developed an NLP-driven sentiment analysis system using Python and scikit-learn.
+          Built preprocessing pipelines, compared models, and achieved over 90% accuracy.
+          This project demonstrates practical application of machine learning and NLP in customer feedback analytics.
+        </p>
+      </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 2rem;">
+  <a href="https://github.com/S1nen/Sentiment-Analysis-System"
+     target="_blank"
+     class="cta-btn"
+     style="margin-right: 1rem;">
+     GitHub Repository
+  </a>
+</div>
+
+  </div>
+
+</body>
+</html>
