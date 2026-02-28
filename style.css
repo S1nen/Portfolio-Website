@@ -192,24 +192,41 @@ h3 {
 }
 
 /* === Experience Section === */
-.experience .job {
-    margin-bottom: 1px;
+.experience {
+    margin-top: 20px;
 }
 
-.experience .exphd {
-    font-size: 13px;
+.experience .school {
+    margin-bottom: 20px;
+}
+
+.experience h5 {
+    margin: 0;
+    font-size: 16px;
+    color: #e6e6e6;
+}
+
+.experience h5 + h5 {
+    margin-top: 4px;
+    font-weight: normal;
     color: #ccc;
 }
 
 .experience p {
-    font-size: 14px;
+    margin: 6px 0;
+    font-size: 13px;
     color: #aaa;
-    margin-top: 7px;
 }
 
-.experience h5, .education h5 {
-    margin-top: -12px;
-    color: #e6e6e6;
+.experience ul {
+    margin: 10px 0 0 18px;
+    padding: 0;
+}
+
+.experience li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #ddd;
 }
 
 /* === Education Section === */
@@ -247,3 +264,4 @@ h3 {
         width: 100%;
     }
 }
+
